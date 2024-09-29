@@ -1,5 +1,8 @@
 package hello.proxy.app.v1;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class OrderServiceV1Impl implements OrderServiceV1 {
 
     private final OrderRepositoryV1 orderRepository;
@@ -10,6 +13,7 @@ public class OrderServiceV1Impl implements OrderServiceV1 {
 
     @Override
     public void orderItem(String itemId) {
+
         orderRepository.save(itemId);
     }
 }
